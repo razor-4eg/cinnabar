@@ -1,9 +1,9 @@
 "Save video" = "ビデオを保存";
-"Paste a YouTube link and Lumen will download it in the quality you choose." = "YouTubeのリンクを貼り付けると、Lumenが選んだ画質でダウンロードします。";
+"Paste a link and Lumen will download it in the quality you choose." = "リンクを貼り付けると、Lumenが選んだ画質でダウンロードします。";
 "Paste" = "ペースト";
 "Clear" = "クリア";
 "Find" = "検索";
-"Without ffmpeg you get one ready-made file, usually up to 720p. 1080p and 4K need ffmpeg." = "ffmpegがない場合は、できあがった1つのファイル（通常は720pまで）になります。1080pと4Kにはffmpegが必要です。";
+"Without ffmpeg you get one ready-made file. Separate video and audio, including 1080p and 4K, need ffmpeg." = "ffmpegがない場合は、できあがった1つのファイルになります。映像と音声が分かれている場合（1080pや4Kを含む）はffmpegが必要です。";
 "Install ffmpeg" = "ffmpegをインストール";
 "Looking up the video…" = "ビデオを確認しています…";
 "If LuLu asks for permission, click Allow." = "LuLuが許可を求めたら、Allowをクリックしてください。";
@@ -63,9 +63,9 @@
 "%@ million views" = "%@百万回視聴";
 "%@ thousand views" = "%@千回視聴";
 "%@ views" = "視聴回数 %@";
-"This isn't a YouTube video link." = "YouTubeのビデオへのリンクではありません。";
+"This isn't a link to a video." = "ビデオへのリンクではありません。";
 "Install the download tools first." = "先にダウンロード用のツールをインストールしてください。";
-"Paste a link to a specific YouTube video." = "特定のYouTubeビデオへのリンクを貼り付けてください。";
+"Paste a link to a specific video." = "特定のビデオへのリンクを貼り付けてください。";
 "Couldn't open the video." = "ビデオを開けませんでした。";
 "In queue" = "キュー内";
 "Cancelled" = "キャンセル済み";
@@ -89,7 +89,7 @@
 "Downloading…" = "ダウンロード中…";
 "Downloading video" = "ビデオをダウンロード中";
 "Install yt-dlp first." = "先にyt-dlpをインストールしてください。";
-"No response from YouTube. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules." = "YouTubeから応答がありません。LuLuがオンの場合、ダウンローダーを遮断し、確認を出さないことがあります。LuLuのルールでこのファイルを許可してください。";
+"No response from the site. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules." = "サイトから応答がありません。LuLuがオンの場合、ダウンローダーを遮断し、確認を出さないことがあります。LuLuのルールでこのファイルを許可してください。";
 "Couldn't read the video details." = "ビデオの情報を読み取れませんでした。";
 "Downloading yt-dlp…" = "yt-dlpをダウンロード中…";
 "yt-dlp is installed" = "yt-dlpをインストールしました";
@@ -107,12 +107,12 @@
 "The %@ archive didn't contain the program." = "%@のアーカイブにプログラムが含まれていませんでした。";
 "Untitled" = "名称未設定";
 "This is a private video — it can't be downloaded." = "非公開のビデオです。ダウンロードできません。";
-"YouTube is asking you to sign in. This video can't be downloaded that way." = "YouTubeがサインインを求めています。このビデオはこの方法ではダウンロードできません。";
+"The site is asking you to sign in. This video can't be downloaded that way." = "サイトがサインインを求めています。このビデオはこの方法ではダウンロードできません。";
 "This video isn't available in your region." = "このビデオはお住まいの地域では視聴できません。";
 "This video isn't available. It may have been removed, or the link is wrong." = "このビデオは利用できません。削除されたか、リンクが間違っている可能性があります。";
 "ffmpeg is needed to combine video and audio. Install it with the button below." = "映像と音声を結合するにはffmpegが必要です。下のボタンからインストールしてください。";
 "The downloader wasn't installed completely. Press Install again." = "ダウンローダーが完全にはインストールされませんでした。インストールをもう一度押してください。";
 "This link doesn't look like a video that can be downloaded." = "このリンクはダウンロードできるビデオのようには見えません。";
-"YouTube is limiting requests for now. Try again in a little while." = "YouTubeが一時的にリクエストを制限しています。しばらくしてからもう一度試してください。";
+"The site is limiting requests for now. Try again in a little while." = "サイトが一時的にリクエストを制限しています。しばらくしてからもう一度試してください。";
 "Couldn't download. Try another quality or check the link." = "ダウンロードできませんでした。別の画質を試すか、リンクを確認してください。";
 "Couldn't launch %@." = "%@を起動できませんでした。";

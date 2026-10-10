@@ -64,7 +64,7 @@ public func humanize(log: [String]) -> String {
         return String(localized: "This is a private video — it can't be downloaded.")
     }
     if lower.contains("sign in") || lower.contains("confirm your age") || lower.contains("login required") {
-        return String(localized: "YouTube is asking you to sign in. This video can't be downloaded that way.")
+        return String(localized: "The site is asking you to sign in. This video can't be downloaded that way.")
     }
     if lower.contains("not available in your country") || (lower.contains("geo") && lower.contains("restricted")) {
         return String(localized: "This video isn't available in your region.")
@@ -82,10 +82,10 @@ public func humanize(log: [String]) -> String {
         return String(localized: "This link doesn't look like a video that can be downloaded.")
     }
     if lower.contains("429") || lower.contains("too many requests") {
-        return String(localized: "YouTube is limiting requests for now. Try again in a little while.")
+        return String(localized: "The site is limiting requests for now. Try again in a little while.")
     }
     if lower.contains("offline") || lower.contains("network is unreachable") || lower.contains("failed to establish a new connection") || lower.contains("connection reset") || lower.contains("operation not permitted") || lower.contains("timed out") || lower.contains("timeout") {
-        return String(localized: "No response from YouTube. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules.")
+        return String(localized: "No response from the site. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules.")
     }
     if let line = log.reversed().first(where: { $0.contains("ERROR:") }) {
         let cleaned = line.replacingOccurrences(of: "ERROR:", with: "").trimmingCharacters(in: .whitespaces)

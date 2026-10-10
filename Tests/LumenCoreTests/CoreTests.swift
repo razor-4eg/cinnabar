@@ -3,13 +3,18 @@ import Testing
 @testable import LumenCore
 
 @Test func acceptsWatchShortsAndShareText() {
-    #expect(YouTubeLink.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ") != nil)
-    #expect(YouTubeLink.parse("https://youtu.be/dQw4w9WgXcQ") != nil)
-    #expect(YouTubeLink.parse("https://www.youtube.com/shorts/abcdefghijk") != nil)
-    #expect(YouTubeLink.parse("смотри https://youtu.be/abcdefghijk, пожалуйста") != nil)
-    #expect(YouTubeLink.parse("https://vimeo.com/123") == nil)
-    #expect(YouTubeLink.parse("https://www.youtube.com/feed/subscriptions") == nil)
-    #expect(YouTubeLink.parse("просто текст") == nil)
+    #expect(MediaLink.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ") != nil)
+    #expect(MediaLink.parse("https://youtu.be/dQw4w9WgXcQ") != nil)
+    #expect(MediaLink.parse("https://www.youtube.com/shorts/abcdefghijk") != nil)
+    #expect(MediaLink.parse("смотри https://youtu.be/abcdefghijk, пожалуйста") != nil)
+    #expect(MediaLink.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PLxxxx") != nil)
+    #expect(MediaLink.parse("https://vimeo.com/123") != nil)
+    #expect(MediaLink.parse("vimeo.com/123") != nil)
+    #expect(MediaLink.parse("смотри https://soundcloud.com/artist/track, пожалуйста") != nil)
+    #expect(MediaLink.parse("https://www.youtube.com/feed/subscriptions") == nil)
+    #expect(MediaLink.parse("https://www.youtube.com/playlist?list=PLxxxx") == nil)
+    #expect(MediaLink.parse("https://vimeo.com") == nil)
+    #expect(MediaLink.parse("просто текст") == nil)
 }
 
 @Test func parsesProgressAndFinalPath() {
@@ -47,10 +52,24 @@ import Testing
             StreamFormat(height: nil, vcodec: "none", acodec: "mp4a.40.2", ext: "m4a", size: 300_000, tbr: 128)
         ]
     )
-    #expect(details.qualities(hasFFmpeg: true) == [.best, .p1080, .p720, .p480, .audio])
+    #expect(details.qualities(hasFFmpeg: true) == [.best, .p1080, .p720, .audio])
     #expect(details.qualities(hasFFmpeg: false) == [.best, .audio])
     #expect(details.estimate(for: .p1080) == 5_300_000)
     #expect(details.estimate(for: .audio) == 300_000)
+
+    let fourK = VideoDetails(
+        id: "abc",
+        title: "4K",
+        channel: nil,
+        thumbnail: nil,
+        duration: nil,
+        viewCount: nil,
+        formats: [
+            StreamFormat(height: 2160, vcodec: "av01", acodec: "none", ext: "mp4", size: nil, tbr: nil),
+            StreamFormat(height: 360, vcodec: "avc1", acodec: "none", ext: "mp4", size: nil, tbr: nil)
+        ]
+    )
+    #expect(fourK.qualities(hasFFmpeg: true) == [.best, .p2160, .audio])
 }
 
 @Test func asksForTheSelectedResolution() {
@@ -60,7 +79,10 @@ import Testing
 
     let fullHD = FormatSelection.arguments(for: .p1080, hasFFmpeg: true).joined(separator: " ")
     #expect(fullHD.contains("bv*[height<=1080][height>=1040][vcodec^=avc1]"))
+    #expect(fullHD.contains("b[height<=1080][height>=1040]"))
     #expect(!fullHD.contains("height<=2160"))
+    let selector = FormatSelection.arguments(for: .p1080, hasFFmpeg: true)[1]
+    #expect(selector.split(separator: "/").last != "b")
 
     #expect(FormatSelection.outputName(for: .p2160).contains("%(height)sp"))
     #expect(FormatSelection.outputName(for: .p1080) != FormatSelection.outputName(for: .audio))

@@ -1,9 +1,9 @@
 "Save video" = "Enregistrer la vidéo";
-"Paste a YouTube link and Lumen will download it in the quality you choose." = "Collez un lien YouTube. Lumen téléchargera la vidéo dans la qualité choisie.";
+"Paste a link and Lumen will download it in the quality you choose." = "Collez un lien. Lumen téléchargera la vidéo dans la qualité choisie.";
 "Paste" = "Coller";
 "Clear" = "Effacer";
 "Find" = "Chercher";
-"Without ffmpeg you get one ready-made file, usually up to 720p. 1080p and 4K need ffmpeg." = "Sans ffmpeg, un seul fichier prêt est disponible, en général jusqu’à 720p. Le 1080p et la 4K nécessitent ffmpeg.";
+"Without ffmpeg you get one ready-made file. Separate video and audio, including 1080p and 4K, need ffmpeg." = "Sans ffmpeg, un seul fichier prêt est disponible. Une vidéo et un audio séparés, y compris le 1080p et la 4K, nécessitent ffmpeg.";
 "Install ffmpeg" = "Installer ffmpeg";
 "Looking up the video…" = "Recherche de la vidéo…";
 "If LuLu asks for permission, click Allow." = "Si LuLu demande l’autorisation, cliquez sur Allow.";
@@ -63,9 +63,9 @@
 "%@ million views" = "%@ millions de vues";
 "%@ thousand views" = "%@ mille vues";
 "%@ views" = "%@ vues";
-"This isn't a YouTube video link." = "Ce n’est pas un lien vers une vidéo YouTube.";
+"This isn't a link to a video." = "Ce n’est pas un lien vers une vidéo.";
 "Install the download tools first." = "Installez d’abord les outils de téléchargement.";
-"Paste a link to a specific YouTube video." = "Collez un lien vers une vidéo YouTube précise.";
+"Paste a link to a specific video." = "Collez un lien vers une vidéo précise.";
 "Couldn't open the video." = "Impossible d’ouvrir la vidéo.";
 "In queue" = "Dans la file";
 "Cancelled" = "Annulé";
@@ -89,7 +89,7 @@
 "Downloading…" = "Téléchargement…";
 "Downloading video" = "Téléchargement de la vidéo";
 "Install yt-dlp first." = "Installez d’abord yt-dlp.";
-"No response from YouTube. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules." = "YouTube ne répond pas. Si LuLu est actif, il bloque le téléchargeur et n’affiche souvent aucune demande. Autorisez ce fichier dans les règles de LuLu.";
+"No response from the site. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules." = "Le site ne répond pas. Si LuLu est actif, il bloque le téléchargeur et n’affiche souvent aucune demande. Autorisez ce fichier dans les règles de LuLu.";
 "Couldn't read the video details." = "Impossible de lire les détails de la vidéo.";
 "Downloading yt-dlp…" = "Téléchargement de yt-dlp…";
 "yt-dlp is installed" = "yt-dlp est installé";
@@ -107,12 +107,12 @@
 "The %@ archive didn't contain the program." = "L’archive %@ ne contenait pas le programme.";
 "Untitled" = "Sans titre";
 "This is a private video — it can't be downloaded." = "Cette vidéo est privée — elle ne peut pas être téléchargée.";
-"YouTube is asking you to sign in. This video can't be downloaded that way." = "YouTube demande une connexion. Cette vidéo ne peut pas être téléchargée ainsi.";
+"The site is asking you to sign in. This video can't be downloaded that way." = "Le site demande une connexion. Cette vidéo ne peut pas être téléchargée ainsi.";
 "This video isn't available in your region." = "Cette vidéo n’est pas disponible dans votre région.";
 "This video isn't available. It may have been removed, or the link is wrong." = "Cette vidéo n’est pas disponible. Elle a peut-être été retirée, ou le lien est incorrect.";
 "ffmpeg is needed to combine video and audio. Install it with the button below." = "ffmpeg est nécessaire pour assembler la vidéo et l’audio. Installez-le avec le bouton ci-dessous.";
 "The downloader wasn't installed completely. Press Install again." = "Le téléchargeur n’a pas été installé complètement. Appuyez de nouveau sur Installer.";
 "This link doesn't look like a video that can be downloaded." = "Ce lien ne ressemble pas à une vidéo téléchargeable.";
-"YouTube is limiting requests for now. Try again in a little while." = "YouTube limite les requêtes pour le moment. Réessayez un peu plus tard.";
+"The site is limiting requests for now. Try again in a little while." = "Le site limite les requêtes pour le moment. Réessayez un peu plus tard.";
 "Couldn't download. Try another quality or check the link." = "Le téléchargement a échoué. Essayez une autre qualité ou vérifiez le lien.";
 "Couldn't launch %@." = "Impossible de lancer %@.";

@@ -1,9 +1,9 @@
 "Save video" = "Сохранить видео";
-"Paste a YouTube link and Lumen will download it in the quality you choose." = "Вставьте ссылку на ролик — Lumen скачает его в выбранном качестве.";
+"Paste a link and Lumen will download it in the quality you choose." = "Вставьте ссылку — Lumen скачает ролик в выбранном качестве.";
 "Paste" = "Вставить";
 "Clear" = "Очистить";
 "Find" = "Найти";
-"Without ffmpeg you get one ready-made file, usually up to 720p. 1080p and 4K need ffmpeg." = "Без ffmpeg доступен один готовый файл, обычно до 720p. Для 1080p и 4K нужен ffmpeg.";
+"Without ffmpeg you get one ready-made file. Separate video and audio, including 1080p and 4K, need ffmpeg." = "Без ffmpeg доступен один готовый файл. Раздельные видео и звук, в том числе 1080p и 4K, собирает ffmpeg.";
 "Install ffmpeg" = "Установить ffmpeg";
 "Looking up the video…" = "Смотрю ролик…";
 "If LuLu asks for permission, click Allow." = "Если LuLu спросит разрешение, нажмите Allow.";
@@ -63,9 +63,9 @@
 "%@ million views" = "%@ млн просмотров";
 "%@ thousand views" = "%@ тыс. просмотров";
 "%@ views" = "%@ просмотров";
-"This isn't a YouTube video link." = "Это не ссылка на ролик YouTube.";
+"This isn't a link to a video." = "Это не ссылка на ролик.";
 "Install the download tools first." = "Сначала установите компоненты загрузки.";
-"Paste a link to a specific YouTube video." = "Нужна ссылка на конкретный ролик YouTube.";
+"Paste a link to a specific video." = "Нужна ссылка на конкретный ролик.";
 "Couldn't open the video." = "Не получилось открыть ролик.";
 "In queue" = "В очереди";
 "Cancelled" = "Отменено";
@@ -89,7 +89,7 @@
 "Downloading…" = "Скачиваю…";
 "Downloading video" = "Загрузка видео";
 "Install yt-dlp first." = "Сначала установите yt-dlp.";
-"No response from YouTube. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules." = "Нет ответа от YouTube. Если включён LuLu, он блокирует компонент загрузки и часто не показывает окошко. Разрешите этот файл в правилах LuLu.";
+"No response from the site. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules." = "Нет ответа от сайта. Если включён LuLu, он блокирует компонент загрузки и часто не показывает окошко. Разрешите этот файл в правилах LuLu.";
 "Couldn't read the video details." = "Не получилось прочитать данные ролика.";
 "Downloading yt-dlp…" = "Скачиваю yt-dlp…";
 "yt-dlp is installed" = "yt-dlp установлен";
@@ -107,12 +107,12 @@
 "The %@ archive didn't contain the program." = "В архиве %@ не нашлось программы.";
 "Untitled" = "Без названия";
 "This is a private video — it can't be downloaded." = "Это приватное видео — скачать его нельзя.";
-"YouTube is asking you to sign in. This video can't be downloaded that way." = "YouTube просит войти в аккаунт. Этот ролик так не скачать.";
+"The site is asking you to sign in. This video can't be downloaded that way." = "Сайт просит войти в аккаунт. Этот ролик так не скачать.";
 "This video isn't available in your region." = "Ролик недоступен в вашем регионе.";
 "This video isn't available. It may have been removed, or the link is wrong." = "Ролик недоступен. Возможно, его удалили или ссылка неверная.";
 "ffmpeg is needed to combine video and audio. Install it with the button below." = "Нужен ffmpeg, чтобы собрать видео и звук. Установите его кнопкой внизу.";
 "The downloader wasn't installed completely. Press Install again." = "Компонент загрузки установился не полностью. Нажмите «Установить» ещё раз.";
 "This link doesn't look like a video that can be downloaded." = "Эта ссылка не похожа на ролик, который можно скачать.";
-"YouTube is limiting requests for now. Try again in a little while." = "YouTube временно ограничил запросы. Попробуйте чуть позже.";
+"The site is limiting requests for now. Try again in a little while." = "Сайт временно ограничил запросы. Попробуйте чуть позже.";
 "Couldn't download. Try another quality or check the link." = "Не получилось скачать. Попробуйте другое качество или проверьте ссылку.";
 "Couldn't launch %@." = "Не удалось запустить %@.";

@@ -128,14 +128,14 @@ final class AppModel {
 
     func refreshPasteHint() {
         let text = NSPasteboard.general.string(forType: .string) ?? ""
-        pasteHint = YouTubeLink.parse(text) != nil && urlText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        pasteHint = MediaLink.parse(text) != nil && urlText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 
     func urlDidChange() {
         errorBanner = nil
         debounce?.cancel()
         refreshPasteHint()
-        guard YouTubeLink.parse(urlText) != nil else {
+        guard MediaLink.parse(urlText) != nil else {
             preview = nil
             return
         }
@@ -154,8 +154,8 @@ final class AppModel {
     }
 
     func acceptDrop(_ raw: String) {
-        guard YouTubeLink.parse(raw) != nil else {
-            errorBanner = String(localized: "This isn't a YouTube video link.")
+        guard MediaLink.parse(raw) != nil else {
+            errorBanner = String(localized: "This isn't a link to a video.")
             return
         }
         urlText = raw.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -173,8 +173,8 @@ final class AppModel {
             errorBanner = String(localized: "Install the download tools first.")
             return
         }
-        guard let url = YouTubeLink.parse(urlText) else {
-            errorBanner = String(localized: "Paste a link to a specific YouTube video.")
+        guard let url = MediaLink.parse(urlText) else {
+            errorBanner = String(localized: "Paste a link to a specific video.")
             preview = nil
             return
         }

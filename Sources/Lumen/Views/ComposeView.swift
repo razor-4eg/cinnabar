@@ -15,7 +15,7 @@ struct ComposeView: View {
                     Text("Save video")
                         .font(.system(size: 32, weight: .semibold))
                         .tracking(-0.6)
-                    Text("Paste a YouTube link and Lumen will download it in the quality you choose.")
+                    Text("Paste a link and Lumen will download it in the quality you choose.")
                         .font(.system(size: 14))
                         .foregroundStyle(.secondary)
                 }
@@ -85,7 +85,7 @@ struct ComposeView: View {
                 .foregroundStyle(.secondary)
                 .symbolEffect(.pulse, isActive: model.isResolving)
 
-            TextField("https://www.youtube.com/watch?v=…", text: $model.urlText)
+            TextField("https://…", text: $model.urlText)
                 .textFieldStyle(.plain)
                 .font(.system(size: 15, weight: .medium))
                 .focused($linkFocused)
@@ -143,7 +143,7 @@ struct ComposeView: View {
             Image(systemName: "info.circle.fill")
                 .foregroundStyle(Theme.accent)
             VStack(alignment: .leading, spacing: 6) {
-                Text("Without ffmpeg you get one ready-made file, usually up to 720p. 1080p and 4K need ffmpeg.")
+                Text("Without ffmpeg you get one ready-made file. Separate video and audio, including 1080p and 4K, need ffmpeg.")
                     .font(.system(size: 12))
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)

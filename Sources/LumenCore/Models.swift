@@ -21,6 +21,19 @@ public enum Quality: String, CaseIterable, Identifiable, Hashable, Codable, Send
         case .p480: 480
         }
     }
+
+    /// Maps a real stream height onto one of the buttons. Heights the app has no button for,
+    /// such as 360p, stay on Best.
+    public static func tier(matching height: Int) -> Quality? {
+        switch height {
+        case 2000...: .p2160
+        case 1400..<2000: .p1440
+        case 1000..<1400: .p1080
+        case 700..<1000: .p720
+        case 400..<700: .p480
+        default: nil
+        }
+    }
 }
 
 public struct StreamFormat: Equatable, Sendable {
@@ -86,16 +99,12 @@ public struct VideoDetails: Equatable, Sendable {
     public func qualities(hasFFmpeg: Bool) -> [Quality] {
         var list: [Quality] = [.best]
         if hasFFmpeg {
-            let maxHeight = maxVideoHeight
-            if maxHeight == 0 {
-                list.append(contentsOf: [.p1080, .p720])
-            } else {
-                for tier in [Quality.p2160, .p1440, .p1080, .p720, .p480] {
-                    guard let ceiling = tier.ceiling else { continue }
-                    if maxHeight >= ceiling - 20 {
-                        list.append(tier)
-                    }
-                }
+            let present = Set(formats.compactMap { format -> Quality? in
+                guard format.isVideo, let height = format.height else { return nil }
+                return Quality.tier(matching: height)
+            })
+            for tier in [Quality.p2160, .p1440, .p1080, .p720, .p480] where present.contains(tier) {
+                list.append(tier)
             }
         }
         list.append(.audio)
@@ -205,6 +214,7 @@ enum FormatSelection {
             let height = quality.ceiling ?? 1080
             let floor = max(height - 40, 1)
             let tier = "bv*[height<=\(height)][height>=\(floor)]"
+            let single = "b[height<=\(height)][height>=\(floor)]"
             return [
                 "\(tier)[vcodec^=avc1]+ba[acodec^=mp4a]",
                 "\(tier)[vcodec^=avc1]+ba",
@@ -213,9 +223,9 @@ enum FormatSelection {
                 "\(tier)[vcodec^=vp09]+ba[acodec^=mp4a]",
                 "\(tier)[vcodec^=vp9]+ba[acodec^=mp4a]",
                 "\(tier)+ba",
+                single,
                 "bv*[height<=\(height)]+ba",
-                "b[height<=\(height)]",
-                "b"
+                "b[height<=\(height)]"
             ].joined(separator: "/")
         }
     }

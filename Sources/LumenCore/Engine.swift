@@ -123,11 +123,11 @@ public struct Engine: Sendable {
             }
             group.addTask {
                 try await Task.sleep(for: .seconds(40))
-                throw EngineFailure(message: String(localized: "No response from YouTube. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules."))
+                throw EngineFailure(message: String(localized: "No response from the site. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules."))
             }
             do {
                 guard let value = try await group.next() else {
-                    throw EngineFailure(message: String(localized: "No response from YouTube. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules."))
+                    throw EngineFailure(message: String(localized: "No response from the site. If LuLu is on, it blocks the downloader and often shows no prompt. Allow this file in LuLu's rules."))
                 }
                 group.cancelAll()
                 while !group.isEmpty {
