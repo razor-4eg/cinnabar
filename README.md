@@ -1,8 +1,15 @@
-# Lumen
+<p align="center">
+  <img src="docs/icon.png" width="128" alt="Lumen">
+</p>
 
-Lumen is a native macOS app for saving YouTube videos. Paste a link, pick a quality, and the file lands in a folder on your Mac.
+<h1 align="center">Lumen</h1>
 
-The interface follows the system language. English and Russian are included.
+<p align="center">
+  A native macOS app for saving YouTube videos.<br>
+  Paste a link, pick a quality, and the file lands in a folder on your Mac.
+</p>
+
+<p align="center">English and Russian, following the system language.</p>
 
 <p align="center">
   <img src="docs/screenshots/download.png" width="780" alt="A YouTube video ready to download, with quality choices from Best to Audio">
