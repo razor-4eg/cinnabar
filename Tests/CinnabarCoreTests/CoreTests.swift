@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import LumenCore
+@testable import CinnabarCore
 
 @Test func acceptsWatchShortsAndShareText() {
     #expect(MediaLink.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ") != nil)

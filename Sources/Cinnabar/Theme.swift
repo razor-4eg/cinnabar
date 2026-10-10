@@ -1,5 +1,5 @@
 import AppKit
-import LumenCore
+import CinnabarCore
 import SwiftUI
 
 enum Theme {

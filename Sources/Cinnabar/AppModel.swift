@@ -1,6 +1,6 @@
 import AppKit
 import Foundation
-import LumenCore
+import CinnabarCore
 import Observation
 import UserNotifications
 
@@ -102,12 +102,12 @@ final class AppModel {
         let engine = Engine()
         try? engine.prepare()
         let folder: URL
-        if let stored = UserDefaults.standard.string(forKey: "lumen.destination"), !stored.isEmpty {
+        if let stored = UserDefaults.standard.string(forKey: "cinnabar.destination"), !stored.isEmpty {
             folder = URL(fileURLWithPath: stored)
         } else {
             let downloads = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first
                 ?? URL(fileURLWithPath: NSHomeDirectory()).appending(path: "Downloads")
-            folder = downloads.appending(path: "Lumen")
+            folder = downloads.appending(path: "Cinnabar")
         }
         self.engine = engine
         destination = folder
@@ -357,7 +357,7 @@ final class AppModel {
         guard !isInstalling, activeCount == 0 else { return }
         let alert = NSAlert()
         alert.messageText = String(localized: "Download the components again?")
-        alert.informativeText = String(localized: "Lumen's copies of yt-dlp and ffmpeg will be replaced with fresh ones. ffmpeg installed with Homebrew stays.")
+        alert.informativeText = String(localized: "Cinnabar's copies of yt-dlp and ffmpeg will be replaced with fresh ones. ffmpeg installed with Homebrew stays.")
         alert.addButton(withTitle: String(localized: "Download"))
         alert.addButton(withTitle: String(localized: "Cancel"))
         guard alert.runModal() == .alertFirstButtonReturn else { return }
@@ -384,7 +384,7 @@ final class AppModel {
         guard !isInstalling, activeCount == 0 else { return }
         let alert = NSAlert()
         alert.messageText = String(localized: "Remove the components?")
-        alert.informativeText = String(localized: "Lumen's copies of yt-dlp and ffmpeg will be deleted. ffmpeg installed with Homebrew stays.")
+        alert.informativeText = String(localized: "Cinnabar's copies of yt-dlp and ffmpeg will be deleted. ffmpeg installed with Homebrew stays.")
         alert.alertStyle = .warning
         alert.addButton(withTitle: String(localized: "Remove"))
         alert.addButton(withTitle: String(localized: "Cancel"))
@@ -401,7 +401,7 @@ final class AppModel {
 
     private func setDestination(_ url: URL) {
         destination = url
-        UserDefaults.standard.set(url.path, forKey: "lumen.destination")
+        UserDefaults.standard.set(url.path, forKey: "cinnabar.destination")
         try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
     }
 
@@ -662,7 +662,7 @@ final class AppModel {
         return number?.int64Value
     }
 
-    private static let hiddenLibraryKey = "lumen.hiddenLibrary"
+    private static let hiddenLibraryKey = "cinnabar.hiddenLibrary"
 
     private func loadLibrary() {
         if let data = try? Data(contentsOf: engine.libraryFile) {

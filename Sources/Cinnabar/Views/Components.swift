@@ -83,7 +83,7 @@ struct SetupCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Prepare the download")
                         .font(.system(size: 18, weight: .semibold))
-                    Text("Lumen downloads the video with yt-dlp and builds the file with ffmpeg. Both tools are free and stay inside the app folder.")
+                    Text("Cinnabar downloads the video with yt-dlp and builds the file with ffmpeg. Both tools are free and stay inside the app folder.")
                         .font(.system(size: 13))
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)

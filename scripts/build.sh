@@ -20,20 +20,20 @@ iconutil -c icns "$ICONSET" -o "$ROOT/Resources/AppIcon.icns"
 echo "→ compile"
 swift build -c release
 
-APP="$ROOT/build/Lumen.app"
+APP="$ROOT/build/Cinnabar.app"
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
-cp "$ROOT/.build/release/Lumen" "$APP/Contents/MacOS/Lumen"
+cp "$ROOT/.build/release/Cinnabar" "$APP/Contents/MacOS/Cinnabar"
 cp "$ROOT/Resources/Info.plist" "$APP/Contents/Info.plist"
 cp "$ROOT/Resources/AppIcon.icns" "$APP/Contents/Resources/AppIcon.icns"
 cp "$ROOT/Resources/HelperInfo.plist" "$APP/Contents/Resources/HelperInfo.plist"
 for lproj in "$ROOT"/Resources/*.lproj; do
   cp -R "$lproj" "$APP/Contents/Resources/"
 done
-chmod +x "$APP/Contents/MacOS/Lumen"
-codesign --force --sign - --identifier app.lumen.downloader "$APP/Contents/MacOS/Lumen"
+chmod +x "$APP/Contents/MacOS/Cinnabar"
+codesign --force --sign - --identifier app.cinnabar.downloader "$APP/Contents/MacOS/Cinnabar"
 
-YTDLP="${HOME}/Library/Application Support/Lumen/bin"
+YTDLP="${HOME}/Library/Application Support/Cinnabar/bin"
 if [[ -x "$YTDLP/yt-dlp" && -e "$YTDLP/_internal/Python" ]]; then
   echo "→ embed yt-dlp"
   HELPER="$APP/Contents/Helpers/YtDlp.app"
@@ -42,7 +42,7 @@ if [[ -x "$YTDLP/yt-dlp" && -e "$YTDLP/_internal/Python" ]]; then
   cp "$ROOT/Resources/AppIcon.icns" "$HELPER/Contents/Resources/AppIcon.icns"
   SIGNED="$(mktemp)"
   cp "$YTDLP/yt-dlp" "$SIGNED"
-  codesign --force --sign - --identifier app.lumen.downloader.ytdlp "$SIGNED"
+  codesign --force --sign - --identifier app.cinnabar.downloader.ytdlp "$SIGNED"
   cp "$SIGNED" "$HELPER/Contents/MacOS/yt-dlp"
   rm -f "$SIGNED"
   rm -rf "$HELPER/Contents/MacOS/_internal"
@@ -52,6 +52,6 @@ if [[ -x "$YTDLP/yt-dlp" && -e "$YTDLP/_internal/Python" ]]; then
   xattr -dr com.apple.quarantine "$HELPER" || true
 fi
 
-codesign --force --sign - --identifier app.lumen.downloader "$APP" || true
+codesign --force --sign - --identifier app.cinnabar.downloader "$APP" || true
 
 echo "→ $APP"

@@ -2,7 +2,7 @@ import AppKit
 import SwiftUI
 
 @main
-struct LumenApp: App {
+struct CinnabarApp: App {
     @NSApplicationDelegateAdaptor(DockDelegate.self) private var dock
 
     var body: some Scene {

@@ -1,5 +1,5 @@
 "Save video" = "Save video";
-"Paste a link and Lumen will download it in the quality you choose." = "Paste a link and Lumen will download it in the quality you choose.";
+"Paste a link and Cinnabar will download it in the quality you choose." = "Paste a link and Cinnabar will download it in the quality you choose.";
 "Paste" = "Paste";
 "Clear" = "Clear";
 "Find" = "Find";
@@ -22,7 +22,7 @@
 "Retry" = "Retry";
 "Remove from queue" = "Remove from queue";
 "Prepare the download" = "Prepare the download";
-"Lumen downloads the video with yt-dlp and builds the file with ffmpeg. Both tools are free and stay inside the app folder." = "Lumen downloads the video with yt-dlp and builds the file with ffmpeg. Both tools are free and stay inside the app folder.";
+"Cinnabar downloads the video with yt-dlp and builds the file with ffmpeg. Both tools are free and stay inside the app folder." = "Cinnabar downloads the video with yt-dlp and builds the file with ffmpeg. Both tools are free and stay inside the app folder.";
 "Installing…" = "Installing…";
 "Install" = "Install";
 "Only save videos you're allowed to download." = "Only save videos you're allowed to download.";
@@ -37,12 +37,12 @@
 "Update" = "Update";
 "Remove" = "Remove";
 "Download the components again?" = "Download the components again?";
-"Lumen's copies of yt-dlp and ffmpeg will be replaced with fresh ones. ffmpeg installed with Homebrew stays." = "Lumen's copies of yt-dlp and ffmpeg will be replaced with fresh ones. ffmpeg installed with Homebrew stays.";
+"Cinnabar's copies of yt-dlp and ffmpeg will be replaced with fresh ones. ffmpeg installed with Homebrew stays." = "Cinnabar's copies of yt-dlp and ffmpeg will be replaced with fresh ones. ffmpeg installed with Homebrew stays.";
 "Remove the components?" = "Remove the components?";
-"Lumen's copies of yt-dlp and ffmpeg will be deleted. ffmpeg installed with Homebrew stays." = "Lumen's copies of yt-dlp and ffmpeg will be deleted. ffmpeg installed with Homebrew stays.";
+"Cinnabar's copies of yt-dlp and ffmpeg will be deleted. ffmpeg installed with Homebrew stays." = "Cinnabar's copies of yt-dlp and ffmpeg will be deleted. ffmpeg installed with Homebrew stays.";
 "Components removed." = "Components removed.";
 "Couldn't remove the components. %@" = "Couldn't remove the components. %@";
-"Only Lumen's own copies are removed or replaced. ffmpeg installed with Homebrew stays." = "Only Lumen's own copies are removed or replaced. ffmpeg installed with Homebrew stays.";
+"Only Cinnabar's own copies are removed or replaced. ffmpeg installed with Homebrew stays." = "Only Cinnabar's own copies are removed or replaced. ffmpeg installed with Homebrew stays.";
 "not found" = "not found";
 "Choose another folder…" = "Choose another folder…";
 "Show in Finder" = "Show in Finder";
@@ -98,7 +98,7 @@
 "ffmpeg is installed" = "ffmpeg is installed";
 "Downloading ffprobe…" = "Downloading ffprobe…";
 "ffprobe didn't install — downloads still work" = "ffprobe didn't install — downloads still work";
-"Couldn't download ffmpeg. Install it with brew install ffmpeg and open Lumen again." = "Couldn't download ffmpeg. Install it with brew install ffmpeg and open Lumen again.";
+"Couldn't download ffmpeg. Install it with brew install ffmpeg and open Cinnabar again." = "Couldn't download ffmpeg. Install it with brew install ffmpeg and open Cinnabar again.";
 "Trying Homebrew — this can take a few minutes…" = "Trying Homebrew — this can take a few minutes…";
 "Homebrew couldn't install ffmpeg. %@" = "Homebrew couldn't install ffmpeg. %@";
 "Couldn't download %@." = "Couldn't download %@.";

@@ -8,9 +8,9 @@ private let helperInfoPlist = """
 <plist version="1.0">
 <dict>
 <key>CFBundleExecutable</key><string>yt-dlp</string>
-<key>CFBundleIdentifier</key><string>app.lumen.downloader.ytdlp</string>
-<key>CFBundleName</key><string>Lumen</string>
-<key>CFBundleDisplayName</key><string>Lumen</string>
+<key>CFBundleIdentifier</key><string>app.cinnabar.downloader.ytdlp</string>
+<key>CFBundleName</key><string>Cinnabar</string>
+<key>CFBundleDisplayName</key><string>Cinnabar</string>
 <key>CFBundlePackageType</key><string>APPL</string>
 <key>CFBundleShortVersionString</key><string>1.0</string>
 <key>CFBundleVersion</key><string>1</string>
@@ -45,7 +45,7 @@ public struct Engine: Sendable {
     public init() {
         let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
             ?? URL(fileURLWithPath: NSHomeDirectory()).appending(path: "Library/Application Support")
-        supportRoot = base.appending(path: "Lumen")
+        supportRoot = base.appending(path: "Cinnabar")
     }
 
     public var hasManagedComponents: Bool {
@@ -311,7 +311,7 @@ public struct Engine: Sendable {
 
     private func installFFmpegWithBrew(_ continuation: AsyncThrowingStream<String, Error>.Continuation) async throws {
         guard let brew = brewExecutable() else {
-            throw EngineFailure(message: String(localized: "Couldn't download ffmpeg. Install it with brew install ffmpeg and open Lumen again."))
+            throw EngineFailure(message: String(localized: "Couldn't download ffmpeg. Install it with brew install ffmpeg and open Cinnabar again."))
         }
         continuation.yield(String(localized: "Trying Homebrew — this can take a few minutes…"))
         let lines = LineProcess().stream(
@@ -337,7 +337,7 @@ public struct Engine: Sendable {
         guard let http = response as? HTTPURLResponse, (200..<300).contains(http.statusCode) else {
             throw EngineFailure(message: String(format: String(localized: "Couldn't download %@."), name))
         }
-        let tempRoot = FileManager.default.temporaryDirectory.appending(path: "lumen-\(UUID().uuidString)")
+        let tempRoot = FileManager.default.temporaryDirectory.appending(path: "cinnabar-\(UUID().uuidString)")
         try FileManager.default.createDirectory(at: tempRoot, withIntermediateDirectories: true)
         defer { try? FileManager.default.removeItem(at: tempRoot) }
 
@@ -416,9 +416,9 @@ public struct Engine: Sendable {
             if FileManager.default.fileExists(atPath: destinationRuntime.path) {
                 try FileManager.default.removeItem(at: destinationRuntime)
             }
-            let signed = FileManager.default.temporaryDirectory.appending(path: "lumen-ytdlp-\(UUID().uuidString)")
+            let signed = FileManager.default.temporaryDirectory.appending(path: "cinnabar-ytdlp-\(UUID().uuidString)")
             try FileManager.default.copyItem(at: binary, to: signed)
-            try bless(signed, identifier: "app.lumen.downloader.ytdlp")
+            try bless(signed, identifier: "app.cinnabar.downloader.ytdlp")
             try FileManager.default.copyItem(at: signed, to: destination)
             try? FileManager.default.removeItem(at: signed)
             try FileManager.default.copyItem(at: runtime, to: destinationRuntime)

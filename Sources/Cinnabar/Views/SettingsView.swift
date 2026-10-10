@@ -36,7 +36,7 @@ struct SettingsView: View {
                 Button("Check again", action: model.refreshEngine)
                     .disabled(model.isInstalling)
 
-                Text("Only Lumen's own copies are removed or replaced. ffmpeg installed with Homebrew stays.")
+                Text("Only Cinnabar's own copies are removed or replaced. ffmpeg installed with Homebrew stays.")
                     .font(.system(size: 12))
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)

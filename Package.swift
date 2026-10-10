@@ -2,28 +2,28 @@
 import PackageDescription
 
 let package = Package(
-    name: "Lumen",
+    name: "Cinnabar",
     platforms: [.macOS(.v14)],
     products: [
-        .executable(name: "Lumen", targets: ["Lumen"])
+        .executable(name: "Cinnabar", targets: ["Cinnabar"])
     ],
     targets: [
         .target(
-            name: "LumenCore",
-            path: "Sources/LumenCore"
+            name: "CinnabarCore",
+            path: "Sources/CinnabarCore"
         ),
         .executableTarget(
-            name: "Lumen",
-            dependencies: ["LumenCore"],
-            path: "Sources/Lumen",
+            name: "Cinnabar",
+            dependencies: ["CinnabarCore"],
+            path: "Sources/Cinnabar",
             swiftSettings: [
                 .swiftLanguageMode(.v6)
             ]
         ),
         .testTarget(
-            name: "LumenCoreTests",
-            dependencies: ["LumenCore"],
-            path: "Tests/LumenCoreTests",
+            name: "CinnabarCoreTests",
+            dependencies: ["CinnabarCore"],
+            path: "Tests/CinnabarCoreTests",
             swiftSettings: [
                 .unsafeFlags(["-plugin-path", "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing"])
             ]

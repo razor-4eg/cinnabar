@@ -15,15 +15,15 @@
 		<string>ru</string>
 	</array>
 	<key>CFBundleExecutable</key>
-	<string>Lumen</string>
+	<string>Cinnabar</string>
 	<key>CFBundleIconFile</key>
 	<string>AppIcon</string>
 	<key>CFBundleIdentifier</key>
-	<string>app.lumen.downloader</string>
+	<string>app.cinnabar.downloader</string>
 	<key>CFBundleDisplayName</key>
-	<string>Lumen</string>
+	<string>Cinnabar</string>
 	<key>CFBundleName</key>
-	<string>Lumen</string>
+	<string>Cinnabar</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -43,6 +43,6 @@
 	<key>NSSupportsSuddenTermination</key>
 	<false/>
 	<key>NSHumanReadableCopyright</key>
-	<string>Lumen</string>
+	<string>Cinnabar</string>
 </dict>
 </plist>

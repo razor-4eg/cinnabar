@@ -86,7 +86,7 @@ private struct Sidebar: View {
                         .foregroundStyle(.white)
                 }
                 VStack(alignment: .leading, spacing: 1) {
-                    Text("Lumen")
+                    Text("Cinnabar")
                         .font(.system(size: 15, weight: .semibold))
                     Text("Downloads")
                         .font(.system(size: 11, weight: .medium))
@@ -141,7 +141,7 @@ private struct Sidebar: View {
 
     private var versionText: String {
         let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
-        return "Lumen \(version)"
+        return "Cinnabar \(version)"
     }
 }
 

@@ -1,5 +1,5 @@
 "Save video" = "Guardar vídeo";
-"Paste a link and Lumen will download it in the quality you choose." = "Pega un enlace y Lumen lo descargará en la calidad que elijas.";
+"Paste a link and Cinnabar will download it in the quality you choose." = "Pega un enlace y Cinnabar lo descargará en la calidad que elijas.";
 "Paste" = "Pegar";
 "Clear" = "Borrar";
 "Find" = "Buscar";
@@ -22,7 +22,7 @@
 "Retry" = "Reintentar";
 "Remove from queue" = "Quitar de la cola";
 "Prepare the download" = "Prepara la descarga";
-"Lumen downloads the video with yt-dlp and builds the file with ffmpeg. Both tools are free and stay inside the app folder." = "Lumen descarga el vídeo con yt-dlp y monta el archivo con ffmpeg. Las dos herramientas son gratuitas y se quedan en la carpeta de la app.";
+"Cinnabar downloads the video with yt-dlp and builds the file with ffmpeg. Both tools are free and stay inside the app folder." = "Cinnabar descarga el vídeo con yt-dlp y monta el archivo con ffmpeg. Las dos herramientas son gratuitas y se quedan en la carpeta de la app.";
 "Installing…" = "Instalando…";
 "Install" = "Instalar";
 "Only save videos you're allowed to download." = "Guarda solo vídeos que tengas permiso para descargar.";
@@ -37,12 +37,12 @@
 "Update" = "Actualizar";
 "Remove" = "Eliminar";
 "Download the components again?" = "¿Descargar los componentes de nuevo?";
-"Lumen's copies of yt-dlp and ffmpeg will be replaced with fresh ones. ffmpeg installed with Homebrew stays." = "Las copias de yt-dlp y ffmpeg que instaló Lumen se sustituirán por otras nuevas. El ffmpeg de Homebrew se queda.";
+"Cinnabar's copies of yt-dlp and ffmpeg will be replaced with fresh ones. ffmpeg installed with Homebrew stays." = "Las copias de yt-dlp y ffmpeg que instaló Cinnabar se sustituirán por otras nuevas. El ffmpeg de Homebrew se queda.";
 "Remove the components?" = "¿Eliminar los componentes?";
-"Lumen's copies of yt-dlp and ffmpeg will be deleted. ffmpeg installed with Homebrew stays." = "Las copias de yt-dlp y ffmpeg que instaló Lumen se eliminarán. El ffmpeg de Homebrew se queda.";
+"Cinnabar's copies of yt-dlp and ffmpeg will be deleted. ffmpeg installed with Homebrew stays." = "Las copias de yt-dlp y ffmpeg que instaló Cinnabar se eliminarán. El ffmpeg de Homebrew se queda.";
 "Components removed." = "Componentes eliminados.";
 "Couldn't remove the components. %@" = "No se pudieron eliminar los componentes. %@";
-"Only Lumen's own copies are removed or replaced. ffmpeg installed with Homebrew stays." = "Solo se eliminan o sustituyen las copias de Lumen. El ffmpeg de Homebrew se queda.";
+"Only Cinnabar's own copies are removed or replaced. ffmpeg installed with Homebrew stays." = "Solo se eliminan o sustituyen las copias de Cinnabar. El ffmpeg de Homebrew se queda.";
 "not found" = "no encontrado";
 "Choose another folder…" = "Elegir otra carpeta…";
 "Show in Finder" = "Mostrar en el Finder";
@@ -98,7 +98,7 @@
 "ffmpeg is installed" = "ffmpeg está instalado";
 "Downloading ffprobe…" = "Descargando ffprobe…";
 "ffprobe didn't install — downloads still work" = "ffprobe no se instaló — las descargas siguen funcionando";
-"Couldn't download ffmpeg. Install it with brew install ffmpeg and open Lumen again." = "No se pudo descargar ffmpeg. Instálalo con brew install ffmpeg y vuelve a abrir Lumen.";
+"Couldn't download ffmpeg. Install it with brew install ffmpeg and open Cinnabar again." = "No se pudo descargar ffmpeg. Instálalo con brew install ffmpeg y vuelve a abrir Cinnabar.";
 "Trying Homebrew — this can take a few minutes…" = "Probando Homebrew — puede tardar unos minutos…";
 "Homebrew couldn't install ffmpeg. %@" = "Homebrew no pudo instalar ffmpeg. %@";
 "Couldn't download %@." = "No se pudo descargar %@.";

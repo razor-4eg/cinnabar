@@ -15,7 +15,7 @@ struct ComposeView: View {
                     Text("Save video")
                         .font(.system(size: 32, weight: .semibold))
                         .tracking(-0.6)
-                    Text("Paste a link and Lumen will download it in the quality you choose.")
+                    Text("Paste a link and Cinnabar will download it in the quality you choose.")
                         .font(.system(size: 14))
                         .foregroundStyle(.secondary)
                 }

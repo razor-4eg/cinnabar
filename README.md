@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/icon.png" width="128" alt="Lumen">
+  <img src="docs/icon.png" width="128" alt="Cinnabar">
 </p>
 
-<h1 align="center">Lumen</h1>
+<h1 align="center">Cinnabar</h1>
 
 <p align="center">
   A native macOS app for saving videos.<br>
@@ -21,9 +21,9 @@
 - Quality choices follow that video: Best, the resolutions it actually offers, and audio only. On YouTube that can be 4K, 1440p, 1080p, 720p, or 480p. Each quality is saved as its own file, so a later download in another quality does not replace the one you already have.
 - A queue runs two downloads at a time. The rest wait their turn.
 - A library of finished videos, with thumbnails, file size, and the quality on disk. Open a file, reveal it in Finder, or move it to the Trash.
-- Files go to `~/Downloads/Lumen` unless you pick another folder from the toolbar or from Settings.
+- Files go to `~/Downloads/Cinnabar` unless you pick another folder from the toolbar or from Settings.
 - Drag a link onto the window, or press **⌘R** to look it up and **⌘↩** to start the download.
-- Closing the window leaves Lumen in the Dock. Clicking the icon opens the window again.
+- Closing the window leaves Cinnabar in the Dock. Clicking the icon opens the window again.
 
 <p align="center">
   <img src="docs/screenshots/library.png" width="780" alt="Library of saved videos">
@@ -33,7 +33,7 @@
 
 - macOS 14 or later
 - Swift 6, from Xcode or the Command Line Tools
-- A network connection the first time Lumen fetches its download tools
+- A network connection the first time Cinnabar fetches its download tools
 
 ## Build
 
@@ -41,10 +41,10 @@ From the project directory:
 
 ```bash
 ./scripts/build.sh
-open build/Lumen.app
+open build/Cinnabar.app
 ```
 
-The script draws the icon, compiles a release build, and assembles an ad-hoc signed `build/Lumen.app`. If yt-dlp is already installed for your user, the script copies it into the app.
+The script draws the icon, compiles a release build, and assembles an ad-hoc signed `build/Cinnabar.app`. If yt-dlp is already installed for your user, the script copies it into the app.
 
 Run the tests with:
 
@@ -54,24 +54,24 @@ swift test
 
 ## Components
 
-Lumen does not download videos itself. It uses three free tools:
+Cinnabar does not download videos itself. It uses three free tools:
 
 | Tool | Role |
 | --- | --- |
 | **yt-dlp** | Reads the page and downloads the streams. |
-| **ffmpeg** | Merges separate video and audio into one MP4. That includes 1080p and 4K when the site splits them. Without ffmpeg, Lumen saves one ready-made file. |
+| **ffmpeg** | Merges separate video and audio into one MP4. That includes 1080p and 4K when the site splits them. Without ffmpeg, Cinnabar saves one ready-made file. |
 | **ffprobe** | Looks at the finished file so yt-dlp can confirm the streams. Downloads still work if it is missing. |
 
 On first launch, **Install** downloads anything that is missing:
 
 - yt-dlp comes from the [yt-dlp GitHub releases](https://github.com/yt-dlp/yt-dlp/releases).
-- ffmpeg and ffprobe come from [evermeet.cx](https://evermeet.cx/ffmpeg/). If Homebrew already provides ffmpeg, Lumen uses that copy and does not download another one.
+- ffmpeg and ffprobe come from [evermeet.cx](https://evermeet.cx/ffmpeg/). If Homebrew already provides ffmpeg, Cinnabar uses that copy and does not download another one.
 
-Lumen keeps its own copies in `~/Library/Application Support/Lumen/bin`. Settings can install what is missing, replace Lumen's copies with fresh ones, or remove them. ffmpeg installed with Homebrew is left alone.
+Cinnabar keeps its own copies in `~/Library/Application Support/Cinnabar/bin`. Settings can install what is missing, replace Cinnabar's copies with fresh ones, or remove them. ffmpeg installed with Homebrew is left alone.
 
 Sites change often enough that an old yt-dlp eventually stops working. Update it from Settings when a video that used to download starts failing. ffmpeg rarely needs an update.
 
-Some pages still will not download. yt-dlp marks a few sites as broken, and that list moves. A site that asks you to sign in needs browser cookies, which Lumen does not send. Protected streams, such as subscription movie services, are out of reach. A playlist or channel link is limited to one item, not the whole collection.
+Some pages still will not download. yt-dlp marks a few sites as broken, and that list moves. A site that asks you to sign in needs browser cookies, which Cinnabar does not send. Protected streams, such as subscription movie services, are out of reach. A playlist or channel link is limited to one item, not the whole collection.
 
 <p align="center">
   <img src="docs/screenshots/settings.png" width="560" alt="Settings, with the download folder and component actions">
@@ -79,16 +79,16 @@ Some pages still will not download. yt-dlp marks a few sites as broken, and that
 
 ## Firewall prompts
 
-yt-dlp connects to the network on its own. A firewall such as LuLu asks for permission per program, so allowing Lumen is not the same as allowing yt-dlp. When the prompt appears, allow it. If nothing happens and no prompt shows up, add an allow rule for the yt-dlp helper yourself.
+yt-dlp connects to the network on its own. A firewall such as LuLu asks for permission per program, so allowing Cinnabar is not the same as allowing yt-dlp. When the prompt appears, allow it. If nothing happens and no prompt shows up, add an allow rule for the yt-dlp helper yourself.
 
 ## Project layout
 
 ```
-Sources/Lumen/          SwiftUI interface
-Sources/LumenCore/      Link parsing, yt-dlp, and ffmpeg
+Sources/Cinnabar/          SwiftUI interface
+Sources/CinnabarCore/      Link parsing, yt-dlp, and ffmpeg
 Resources/              App metadata, icon, and localizations
 scripts/build.sh        Release build
-Tests/LumenCoreTests/   Engine tests
+Tests/CinnabarCoreTests/   Engine tests
 ```
 
 Only save videos you are allowed to download.
