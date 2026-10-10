@@ -35,6 +35,20 @@
 - Swift 6, from Xcode or the Command Line Tools
 - A network connection the first time Cinnabar fetches its download tools
 
+## Install
+
+Download `Cinnabar-1.0-macOS.zip` from the [releases](https://github.com/razor-4eg/cinnabar/releases), unzip it, and move `Cinnabar.app` to Applications.
+
+The release is ad-hoc signed and not notarized, so macOS blocks the first open. Try to launch it once. Then open **System Settings → Privacy & Security**, scroll to Security, and click **Open Anyway**. Confirm with your password. After that, Cinnabar opens with a double-click. The button stays available for about an hour after the blocked launch.
+
+Or clear the download quarantine from Terminal. Use the path where the app actually is:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/Cinnabar.app
+```
+
+A copy you build yourself does not need either step.
+
 ## Build
 
 From the project directory:
