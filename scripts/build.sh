@@ -27,8 +27,9 @@ cp "$ROOT/.build/release/Lumen" "$APP/Contents/MacOS/Lumen"
 cp "$ROOT/Resources/Info.plist" "$APP/Contents/Info.plist"
 cp "$ROOT/Resources/AppIcon.icns" "$APP/Contents/Resources/AppIcon.icns"
 cp "$ROOT/Resources/HelperInfo.plist" "$APP/Contents/Resources/HelperInfo.plist"
-cp -R "$ROOT/Resources/en.lproj" "$APP/Contents/Resources/en.lproj"
-cp -R "$ROOT/Resources/ru.lproj" "$APP/Contents/Resources/ru.lproj"
+for lproj in "$ROOT"/Resources/*.lproj; do
+  cp -R "$lproj" "$APP/Contents/Resources/"
+done
 chmod +x "$APP/Contents/MacOS/Lumen"
 codesign --force --sign - --identifier app.lumen.downloader "$APP/Contents/MacOS/Lumen"
 

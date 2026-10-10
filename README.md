@@ -9,7 +9,7 @@
   Paste a link, pick a quality, and the file lands in a folder on your Mac.
 </p>
 
-<p align="center">English and Russian, following the system language.</p>
+<p align="center">Follows the system language: English, German, Spanish, French, Japanese, Portuguese, and Russian.</p>
 
 <p align="center">
   <img src="docs/screenshots/download.png" width="780" alt="A YouTube video ready to download, with quality choices from Best to Audio">
