@@ -5,9 +5,11 @@
 <h1 align="center">Cinnabar</h1>
 
 <p align="center">
-  A native macOS app for saving videos.<br>
+  A native macOS app for saving videos from online platforms.<br>
   Paste a link, pick a quality, and the file lands in a folder on your Mac.
 </p>
+
+<p align="center">YouTube, TikTok, Instagram, Vimeo, X, Twitch, Facebook, Reddit, VK, Rutube, and the other sites yt-dlp supports.</p>
 
 <p align="center">Follows the system language: English, German, Spanish, French, Japanese, Portuguese, and Russian.</p>
 
@@ -17,7 +19,7 @@
 
 ## Features
 
-- Accepts a link to a single video from the sites [yt-dlp](https://github.com/yt-dlp/yt-dlp) supports, including YouTube watch links, `youtu.be`, Shorts, live streams, and embeds. A playlist or channel page is not downloaded as a whole.
+- Accepts a link to a single video from the online platforms [yt-dlp](https://github.com/yt-dlp/yt-dlp) supports. Popular ones include YouTube (watch links, `youtu.be`, Shorts, live streams, and embeds), TikTok, Instagram, Vimeo, X, Twitch, Facebook, Reddit, VK, and Rutube. A playlist or channel page is not downloaded as a whole.
 - Quality choices follow that video: Best, the resolutions it actually offers, and audio only. On YouTube that can be 4K, 1440p, 1080p, 720p, or 480p. Each quality is saved as its own file, so a later download in another quality does not replace the one you already have.
 - A queue runs two downloads at a time. The rest wait their turn.
 - A library of finished videos, with thumbnails, file size, and the quality on disk. Open a file, reveal it in Finder, or move it to the Trash.
